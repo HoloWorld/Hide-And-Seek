@@ -3,10 +3,10 @@ using System.Collections;
 
 public class camerarot : MonoBehaviour
 {
-
+    //카메라를 회전해 주는 소스이다.
     public float movespeed = 0.1f;
     public float rotationspeed = 1.0f;
-    public float smooth = 2.0F;
+    public float smooth = 2.0f;
 
     // Use this for initialization
     void Start()
@@ -44,6 +44,7 @@ public class camerarot : MonoBehaviour
         {
             movepos.x = -movespeed;
         }*/
+        //Q,E 버튼으로 회전한다.
         if (Input.GetKey(KeyCode.Q))
         {
             float tiltAroundY = rotationspeed;

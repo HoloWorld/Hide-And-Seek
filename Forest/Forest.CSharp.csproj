@@ -68,7 +68,6 @@
     <Compile Include="Assets\Script\camerarot.cs" />
     <Compile Include="Assets\Script\catchbug.cs" />
     <Compile Include="Assets\Script\projection.cs" />
-    <Compile Include="Assets\Script\waterfapp.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Asset\Shaders\Normal-Diffuse.shader" />

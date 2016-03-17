@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        //마우스 클릭 부분을 처리하기 위한 부분이다.
         if (Input.GetMouseButtonDown(0))
         { 
             RaycastHit hit;
@@ -29,6 +30,7 @@ public class GameManager : MonoBehaviour {
     }
     void checktarget(RaycastHit hit)
     {
+        //만약 클릭한 대상이 벌레일 경우 없애준다.
         Debug.Log("Hit log : " + hit.transform.tag);
         if(hit.transform.tag == "Bug")
         {
