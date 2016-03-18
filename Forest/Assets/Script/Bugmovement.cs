@@ -23,20 +23,21 @@ public class Bugmovement : MonoBehaviour
     public static movePos[] movepos; //숨을수 있는 위치
     public static NavMeshAgent nav;
     public static bool playerInRange = false;
-    
+    GameObject[] hide;
+
     float timer;
     public static int currentpos = 9; //최초 위치는 엉뚱한 곳으로 설정하여 무조건 이동하도록
     // Use this for initialization
     void Awake()
     {
-        movepos = new movePos[]{new movePos(0,GameObject.Find("1").transform),
-                                new movePos(1,GameObject.Find("2").transform),
-                                new movePos(2,GameObject.Find("3").transform),
-                                new movePos(3,GameObject.Find("4").transform),
-                                new movePos(4,GameObject.Find("5").transform),
-                                new movePos(5,GameObject.Find("6").transform),
-                                new movePos(6,GameObject.Find("7").transform)};
-
+        hide = GameObject.FindGameObjectsWithTag("Hidespot");
+        Debug.Log("Hide spot : " + hide.Length);
+        movepos = new movePos[hide.Length];
+        for (int i=0; i< hide.Length; i++)
+        {
+            movepos[i] = new movePos(i,hide[i].transform);
+        }
+       
         nav = GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player");
         Debug.Log(player.tag);
@@ -80,7 +81,7 @@ public class Bugmovement : MonoBehaviour
         while (true)
         {
             //임의의 범위를 정해준다.
-            randpos = Random.Range(0, 7);
+            randpos = Random.Range(0, movepos.Length);
             if (randpos != currentpos) break;
         }
         Debug.Log("Currrentpos : " + currentpos + " / Randpos : " + randpos);
