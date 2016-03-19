@@ -15,12 +15,9 @@ public class catchbug : MonoBehaviour
     void Update()
     {
         //벌레를 강제로 움직이게 하기 위한 디버그용 부분
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            Bugmovement.bugmove();
-        }
+        
     }
-    void OnTriggerEnter(Collider other)
+    /*void OnTriggerEnter(Collider other)
     {
         //트리거 내에 벌레가 있을 경우 이동을 시켜주는데,
         //알고리즘 수정 하면 불필요.
@@ -29,5 +26,5 @@ public class catchbug : MonoBehaviour
         {
             Bugmovement.bugmove();
         }
-    }
+    }*/
 }

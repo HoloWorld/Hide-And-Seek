@@ -4,8 +4,7 @@ using System.Collections;
 public class GameManager : MonoBehaviour {
 
     public Camera cam;
-    public GameObject bugdieprefap;
-    public AudioClip bugdeadsount;
+    public Animator anim;
 	// Use this for initialization
 	void Start () {
 	
@@ -18,7 +17,7 @@ public class GameManager : MonoBehaviour {
         { 
             RaycastHit hit;
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-            Debug.Log("Click event called : " + Input.mousePosition);
+            //Debug.Log("Click event called : " + Input.mousePosition);
 
             if (!Physics.Raycast(ray,out hit, Mathf.Infinity))
             {
@@ -34,9 +33,9 @@ public class GameManager : MonoBehaviour {
         Debug.Log("Hit log : " + hit.transform.tag);
         if(hit.transform.tag == "Bug")
         {
-            Instantiate(bugdieprefap, hit.transform.position, Quaternion.identity);
-            AudioSource.PlayClipAtPoint(bugdeadsount, hit.transform.position);
-            Destroy(hit.transform.gameObject);
+            hit.transform.GetComponent<NavMeshAgent>().speed = 0;
+            anim.SetTrigger("IsDead");
+            //Destroy(hit.transform.gameObject);
         }
     }
     
