@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{F2B9BEDA-3BD2-47A4-B953-7215ECFB6357}") = "Kinect_Holo_ver0.01", "Assembly-CSharp.csproj", "{D91A1F85-3A69-945F-8794-06E561FC9306}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D91A1F85-3A69-945F-8794-06E561FC9306}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D91A1F85-3A69-945F-8794-06E561FC9306}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D91A1F85-3A69-945F-8794-06E561FC9306}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D91A1F85-3A69-945F-8794-06E561FC9306}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
