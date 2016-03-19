@@ -18,11 +18,12 @@ public class Bugmovement : MonoBehaviour
 {
 
     public float movetime = 2.0f; //이 시간 까지 트리거 안에 있을 경우 이동
+    public Camera cam;
     GameObject player; //피할 대상
     //전부 public static 인 이유는 bugmove 함수를 외부에서 호출하기 위함
     public static movePos[] movepos; //숨을수 있는 위치
     public static NavMeshAgent nav;
-    public static bool playerInRange = false;
+    public static bool playerInRange = true;
     GameObject[] hide;
 
     float timer;
@@ -40,43 +41,67 @@ public class Bugmovement : MonoBehaviour
        
         nav = GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player");
-        Debug.Log(player.tag);
-        //bugmove();
+        //Debug.Log(player.tag);
+       bugmove();
     }
     void Update()
     {
         //Debug.Log("PlayerInRange : " + playerInRange);
         //Debug.Log(timer);
         //플레이어가 범위 안에 있을 경우 시간을 샘
-        if(playerInRange)
+        if(!playerInRange)
             timer += Time.deltaTime;
 
         //특정 시간이 지났을 경우 이동
-        if (timer >= movetime)
+        if (timer > movetime)
         {
+            //bugmove();
+            playerInRange = true;
             timer = 0.0f;
-            bugmove();
+        }
+        if(playerInRange)
+        {
+            RaycastHit hit1;
+            // Calculate Ray direction
+
+            Vector3 direction = player.transform.position - transform.position;
+            //Debug.Log("Directrion : " + direction);
+            if (Physics.Raycast(transform.position, direction, out hit1))
+            {
+                Debug.Log("Current hit : " + hit1.transform.tag);
+                if (hit1.transform.tag == "Player")
+                {
+                    Debug.Log("is visible in cam");
+                    bugmove();
+
+                }
+                else
+                {
+                    Debug.Log("this is behinde the cam");
+                }
+            }
         }
     }
     // Update is called once per frame
-    void OnTriggerStay(Collider other)
+    /*void OnTriggerStay(Collider other)
     {
         Debug.Log("PlayerInRange : "+ playerInRange);
         //사용자 범위에 계속 존재할 경우
         if(other.transform.tag == "Player")
             playerInRange = true;
 
-    }
+    }*/
    
-    void OnTriggerExit(Collider other)
+    /*void OnTriggerExit(Collider other)
     {
         //사용자 범위에 벗어낫을 경우 false
         playerInRange = false;
         timer = 0.0f;
-    }
+    }*/
     //벌레 이동 함수이다.
     public static void bugmove()
     {
+        playerInRange = false;
         int randpos;
         while (true)
         {
@@ -84,11 +109,10 @@ public class Bugmovement : MonoBehaviour
             randpos = Random.Range(0, movepos.Length);
             if (randpos != currentpos) break;
         }
-        Debug.Log("Currrentpos : " + currentpos + " / Randpos : " + randpos);
+        //Debug.Log("Currrentpos : " + currentpos + " / Randpos : " + randpos);
         currentpos = randpos;
         //nav.enabled = true;
         //다음 목표물을 선택한다.
-        nav.SetDestination(movepos[currentpos].pos.position);
-        playerInRange = false;
+        nav.SetDestination(movepos[currentpos].pos.position);  
     }
 }
