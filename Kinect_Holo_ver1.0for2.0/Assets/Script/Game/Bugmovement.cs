@@ -23,7 +23,7 @@ public class Bugmovement : MonoBehaviour
     //전부 public static 인 이유는 bugmove 함수를 외부에서 호출하기 위함
     movePos[] movepos; //숨을수 있는 위치
     NavMeshAgent nav;
-    bool playerInRange = true;
+    public static bool playerInRange = false;
     public Animator anim;
     GameObject[] hide;
 
@@ -60,8 +60,8 @@ public class Bugmovement : MonoBehaviour
         //Debug.Log("PlayerInRange : " + playerInRange);
         //Debug.Log(timer);
         //플레이어가 범위 안에 있을 경우 시간을 샘
-        if (!playerInRange)
-        timer += Time.deltaTime;
+        /*if (!playerInRange)
+            timer += Time.deltaTime;
 
         //특정 시간이 지났을 경우 이동
         if (timer > movetime)
@@ -91,7 +91,10 @@ public class Bugmovement : MonoBehaviour
                     Debug.Log("this is behinde the cam");
                 }
             }
-        }
+        }*/
+        if (playerInRange)
+            bugmove();
+
     }
 
     //벌레 이동 함수이다.
@@ -124,6 +127,18 @@ public class Bugmovement : MonoBehaviour
         return false;
     }
 
+
+    void OnTriggerEnter(Collider col)
+    {
+        if(col.transform.tag == "Hand")
+        {
+            bugmove();
+        }
+    }
+    void BugDead()
+    {
+        StartCoroutine(DestroyBug());
+    }
     IEnumerator DestroyBug()
     {
         yield return new WaitForSeconds(0.5f);
