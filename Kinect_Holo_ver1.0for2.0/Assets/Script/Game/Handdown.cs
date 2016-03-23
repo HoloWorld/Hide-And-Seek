@@ -75,6 +75,11 @@ public class Handdown : MonoBehaviour {
             col.GetComponent<Animator>().SetTrigger("IsDead");
         }
 
+        if(col.transform.tag == "guu")
+        {
+            Destroy(col.gameObject);
+        }
+
         if(col.transform.tag == "BugHead")
         {
             Bugmovement.playerInRange = true;

@@ -91,16 +91,19 @@
     <Compile Include="Assets\Script\Kinect\KinectWrapper\KinectSensor.cs" />
     <Compile Include="Assets\Script\Kinect\KinectWrapper\SkeletonWrapper.cs" />
     <Compile Include="Assets\Script\Kinect\TesterBall\TesterBall.cs" />
+    <Compile Include="Assets\Script\UI\RotateTitleScript.cs" />
     <Compile Include="Assets\Script\UI\SetTheManX.cs" />
     <Compile Include="Assets\Script\UI\SetTheManY.cs" />
     <Compile Include="Assets\Script\UI\SetTheManZ.cs" />
     <Compile Include="Assets\Script\UI\SetTheSensitivity.cs" />
+    <Compile Include="Assets\Script\UI\ZoominoutButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Asset\PB_Spider\readme.txt" />
     <None Include="Assets\Asset\Shaders\Normal-Diffuse.shader" />
     <None Include="Assets\Shaders\Anaglyph_Balanced_Param.shader" />
     <None Include="Assets\Shaders\Anaglyph_Balanced_parametric.shader" />
+    <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
