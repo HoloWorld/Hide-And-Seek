@@ -23,12 +23,13 @@ public class Bugmovement : MonoBehaviour
     //전부 public static 인 이유는 bugmove 함수를 외부에서 호출하기 위함
     movePos[] movepos; //숨을수 있는 위치
     NavMeshAgent nav;
-    public static bool playerInRange = false;
+    public bool playerInRange = false;
     public Animator anim;
+
     GameObject[] hide;
 
-    float timer;
-    public static int currentpos = 9; //최초 위치는 엉뚱한 곳으로 설정하여 무조건 이동하도록
+    
+    int currentpos = 9; //최초 위치는 엉뚱한 곳으로 설정하여 무조건 이동하도록
     // Use this for initialization
     void Awake()
     {
@@ -44,6 +45,7 @@ public class Bugmovement : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         //anim.GetComponent<Animator>();
         //Debug.Log(player.tag);
+        
         bugmove();
     }
     void Update()
@@ -93,7 +95,16 @@ public class Bugmovement : MonoBehaviour
             }
         }*/
         if (playerInRange)
+        {
+            nav.speed -= 2;
             bugmove();
+        }
+            
+
+        if(anim.GetBool("IsDead"))
+        {
+            BugDead();
+        }
 
     }
 
@@ -108,7 +119,7 @@ public class Bugmovement : MonoBehaviour
             randpos = Random.Range(0, movepos.Length);
             if (randpos != currentpos) break;
         }
-        //Debug.Log("Currrentpos : " + currentpos + " / Randpos : " + randpos);
+        Debug.Log("Currrentpos : " + currentpos + " / Randpos : " + randpos);
         currentpos = randpos;
         //nav.enabled = true;
         //다음 목표물을 선택한다.
@@ -141,7 +152,11 @@ public class Bugmovement : MonoBehaviour
     }
     IEnumerator DestroyBug()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(2f);
+        GameManager.bugcount--;
+        
+        Debug.Log("Score : " + GameManager.gamescore);
         Destroy(gameObject);
+        
     }
 }

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Handdown : MonoBehaviour {
 
@@ -9,10 +10,13 @@ public class Handdown : MonoBehaviour {
     private bool isdown = true;
     private bool keyisdown = false;
     public float minimunheight = 0.0f;
+    public int nextscene = 1;
+
     private KeyCode downkey;
     void Awake()
     {
         downkey = KeyCode.K;
+        
     }
 	// Use this for initialization
 	void Start () {
@@ -71,18 +75,20 @@ public class Handdown : MonoBehaviour {
         //벌레일 경우 죽임
         if(col.transform.tag == "Bug")
         {
+            GameManager.gamescore += col.transform.GetComponent<NavMeshAgent>().speed * 10;
             col.transform.GetComponent<NavMeshAgent>().speed = 0;
             col.GetComponent<Animator>().SetTrigger("IsDead");
         }
 
         if(col.transform.tag == "guu")
         {
+            SceneManager.LoadScene(nextscene);
             Destroy(col.gameObject);
         }
 
         if(col.transform.tag == "BugHead")
         {
-            Bugmovement.playerInRange = true;
+            col.GetComponentInParent<Bugmovement>().playerInRange = true;
         }
     }
 

@@ -65,8 +65,12 @@
   <ItemGroup>
     <Compile Include="Assets\Script\Game\Bugmovement.cs" />
     <Compile Include="Assets\Script\Game\Checkmousepos.cs" />
+    <Compile Include="Assets\Script\Game\DatasaveScript.cs" />
     <Compile Include="Assets\Script\Game\GameManager.cs" />
     <Compile Include="Assets\Script\Game\Handdown.cs" />
+    <Compile Include="Assets\Script\Game\Removebox.cs" />
+    <Compile Include="Assets\Script\Game\SelectScript.cs" />
+    <Compile Include="Assets\Script\Game\Selecthan.cs" />
     <Compile Include="Assets\Script\Game\catchbug.cs" />
     <Compile Include="Assets\Script\Kinect\KinectCameraControllers\AnaglyphizerC.cs" />
     <Compile Include="Assets\Script\Kinect\KinectCameraControllers\CameraPerspectiveController.cs" />
