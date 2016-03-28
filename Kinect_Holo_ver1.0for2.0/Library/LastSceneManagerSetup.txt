@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scene/CharacterSel.unity
+- path: Assets/Scene/Titlescene.unity
   isLoaded: 1
   isActive: 1

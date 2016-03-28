@@ -29,7 +29,7 @@ public class Handdown : MonoBehaviour {
         //gameObject.transform.Translate(new Vector3(0, -downspeed, 0));
 
         //키가 눌러졌을 경우 내려감
-        if (Input.GetKeyDown(downkey))
+        /*if (Input.GetKeyDown(downkey))
         {
             keyisdown = true;
         }
@@ -61,17 +61,17 @@ public class Handdown : MonoBehaviour {
             isdown = false;
         if (gameObject.transform.position.y >= defaultheight)
             isdown = true;
-
+        */
     }
 
     void OnTriggerEnter(Collider col)
     {
-        Debug.Log("Colision to Map : " + col.transform.tag);
+        /*Debug.Log("Colision to Map : " + col.transform.tag);
         //맵에 부딪혔을 경우는 더 안내려감
         if (col.transform.tag == "Map")
         {
             isdown = false;
-        }
+        }*/
         //벌레일 경우 죽임
         if(col.transform.tag == "Bug")
         {
@@ -92,13 +92,13 @@ public class Handdown : MonoBehaviour {
         }
     }
 
-    void OnTriggerExit(Collider col)
+    /*void OnTriggerExit(Collider col)
     {
         if(col.transform.tag == "Map")
         {
             isdown = true;
         }
-    }
+    }*/
         
 
 }

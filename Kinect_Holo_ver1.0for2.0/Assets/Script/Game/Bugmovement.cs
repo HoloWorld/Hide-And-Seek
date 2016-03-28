@@ -18,14 +18,14 @@ public class Bugmovement : MonoBehaviour
 {
 
     public float movetime = 2.0f; //이 시간 까지 트리거 안에 있을 경우 이동
-    public Camera cam;
+    
     GameObject player; //피할 대상
     //전부 public static 인 이유는 bugmove 함수를 외부에서 호출하기 위함
     movePos[] movepos; //숨을수 있는 위치
     NavMeshAgent nav;
     public bool playerInRange = false;
     public Animator anim;
-
+    private Camera cam;
     GameObject[] hide;
 
     
@@ -40,7 +40,7 @@ public class Bugmovement : MonoBehaviour
         {
             movepos[i] = new movePos(i, hide[i].transform);
         }
-
+        cam = Camera.main;
         nav = GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player");
         //anim.GetComponent<Animator>();

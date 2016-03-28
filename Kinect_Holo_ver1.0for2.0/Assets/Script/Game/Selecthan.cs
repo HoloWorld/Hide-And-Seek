@@ -4,8 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class Selecthan : MonoBehaviour
 {
-
-
     public float downspeed = 1.0f;
     public float defaultheight = 5.0f;
     private bool isdown = true;
@@ -28,7 +26,7 @@ public class Selecthan : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //키가 눌러졌을 경우 내려감
+        /*//키가 눌러졌을 경우 내려감
         if (Input.GetKeyDown(downkey))
         {
             keyisdown = true;
@@ -61,17 +59,17 @@ public class Selecthan : MonoBehaviour
             isdown = false;
         if (gameObject.transform.position.y >= defaultheight)
             isdown = true;
-
+        */
     }
 
     void OnTriggerEnter(Collider col)
     {
         Debug.Log("Colision to Map : " + col.transform.tag);
         //맵에 부딪혔을 경우는 더 안내려감
-        if (col.transform.tag == "Map")
+        /*if (col.transform.tag == "Map")
         {
             isdown = false;
-        }
+        }*/
         
         if (col.transform.tag == "Bug")
         {
@@ -81,10 +79,10 @@ public class Selecthan : MonoBehaviour
 
     void OnTriggerExit(Collider col)
     {
-        if (col.transform.tag == "Map")
+        /*if (col.transform.tag == "Map")
         {
             isdown = true;
-        }
+        }*/
     }
 
 
