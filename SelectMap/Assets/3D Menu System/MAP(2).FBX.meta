@@ -1,0 +1,439 @@
+fileFormatVersion: 2
+guid: 0a9bce6d8280445888037a3d4e48ebbb
+timeCreated: 1459324227
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: 37 Cookin0
+    100002: 37 Cookin1
+    100004: 37 Cooking
+    100006: bottle_1_h
+    100008: ChamferCy0
+    100010: ChamferCyl
+    100012: Circle05
+    100014: Circle050
+    100016: Circle06
+    100018: Circle060
+    100020: Circle30
+    100022: Circle54
+    100024: Cone01
+    100026: Cone02
+    100028: Cylinder
+    100030: Cylinder01
+    100032: Cylinder04
+    100034: Cylinder_001
+    100036: Ellipse03
+    100038: F04 Green apple 1
+    100040: F04 Green apple 2
+    100042: F04 Green apple 3
+    100044: F04 Green apple 4
+    100046: F04 Green apple 6
+    100048: Group005
+    100050: Group006
+    100052: Label
+    100054: Line07
+    100056: Line09
+    100058: Loft01
+    100060: Loft02
+    100062: //RootNode
+    100064: Metal box
+    100066: Object
+    100068: Object006
+    100070: Object01
+    100072: Object02
+    100074: Object04
+    100076: Object05
+    100078: Plane001
+    100080: Rectangle0
+    100082: Rectangle1
+    100084: Screw
+    100086: table_de10
+    100088: table_de12
+    100090: table_de13
+    100092: table_de14
+    100094: table_de15
+    100096: table_de16
+    100098: table_de17
+    100100: table_de18
+    100102: table_de19
+    100104: table_de20
+    100106: table_de21
+    100108: table_de22
+    100110: table_de23
+    100112: table_de24
+    100114: table_de25
+    100116: table_de26
+    100118: table_de27
+    100120: table_de28
+    100122: table_det0
+    100124: table_det1
+    100126: table_det2
+    100128: table_det3
+    100130: table_det4
+    100132: table_det5
+    100134: table_det6
+    100136: table_det7
+    100138: table_det8
+    100140: table_det9
+    100142: table_det_
+    100144: Tongue
+    100146: yogurt005
+    100148: yogurt04
+    400000: 37 Cookin0
+    400002: 37 Cookin1
+    400004: 37 Cooking
+    400006: bottle_1_h
+    400008: ChamferCy0
+    400010: ChamferCyl
+    400012: Circle05
+    400014: Circle050
+    400016: Circle06
+    400018: Circle060
+    400020: Circle30
+    400022: Circle54
+    400024: Cone01
+    400026: Cone02
+    400028: Cylinder
+    400030: Cylinder01
+    400032: Cylinder04
+    400034: Cylinder_001
+    400036: Ellipse03
+    400038: F04 Green apple 1
+    400040: F04 Green apple 2
+    400042: F04 Green apple 3
+    400044: F04 Green apple 4
+    400046: F04 Green apple 6
+    400048: Group005
+    400050: Group006
+    400052: Label
+    400054: Line07
+    400056: Line09
+    400058: Loft01
+    400060: Loft02
+    400062: //RootNode
+    400064: Metal box
+    400066: Object
+    400068: Object006
+    400070: Object01
+    400072: Object02
+    400074: Object04
+    400076: Object05
+    400078: Plane001
+    400080: Rectangle0
+    400082: Rectangle1
+    400084: Screw
+    400086: table_de10
+    400088: table_de12
+    400090: table_de13
+    400092: table_de14
+    400094: table_de15
+    400096: table_de16
+    400098: table_de17
+    400100: table_de18
+    400102: table_de19
+    400104: table_de20
+    400106: table_de21
+    400108: table_de22
+    400110: table_de23
+    400112: table_de24
+    400114: table_de25
+    400116: table_de26
+    400118: table_de27
+    400120: table_de28
+    400122: table_det0
+    400124: table_det1
+    400126: table_det2
+    400128: table_det3
+    400130: table_det4
+    400132: table_det5
+    400134: table_det6
+    400136: table_det7
+    400138: table_det8
+    400140: table_det9
+    400142: table_det_
+    400144: Tongue
+    400146: yogurt005
+    400148: yogurt04
+    2300000: 37 Cookin0
+    2300002: 37 Cookin1
+    2300004: 37 Cooking
+    2300006: bottle_1_h
+    2300008: ChamferCy0
+    2300010: ChamferCyl
+    2300012: Circle05
+    2300014: Circle050
+    2300016: Circle06
+    2300018: Circle060
+    2300020: Circle30
+    2300022: Circle54
+    2300024: Cone01
+    2300026: Cone02
+    2300028: Cylinder
+    2300030: Cylinder01
+    2300032: Cylinder04
+    2300034: Cylinder_001
+    2300036: Ellipse03
+    2300038: F04 Green apple 1
+    2300040: F04 Green apple 2
+    2300042: F04 Green apple 3
+    2300044: F04 Green apple 4
+    2300046: F04 Green apple 6
+    2300048: Label
+    2300050: Line07
+    2300052: Line09
+    2300054: Loft01
+    2300056: Loft02
+    2300058: Metal box
+    2300060: Object
+    2300062: Object006
+    2300064: Object01
+    2300066: Object02
+    2300068: Object04
+    2300070: Object05
+    2300072: Plane001
+    2300074: Rectangle0
+    2300076: Rectangle1
+    2300078: Screw
+    2300080: table_de10
+    2300082: table_de12
+    2300084: table_de13
+    2300086: table_de14
+    2300088: table_de15
+    2300090: table_de16
+    2300092: table_de17
+    2300094: table_de18
+    2300096: table_de19
+    2300098: table_de20
+    2300100: table_de21
+    2300102: table_de22
+    2300104: table_de23
+    2300106: table_de24
+    2300108: table_de25
+    2300110: table_de26
+    2300112: table_de27
+    2300114: table_de28
+    2300116: table_det0
+    2300118: table_det1
+    2300120: table_det2
+    2300122: table_det3
+    2300124: table_det4
+    2300126: table_det5
+    2300128: table_det6
+    2300130: table_det7
+    2300132: table_det8
+    2300134: table_det9
+    2300136: table_det_
+    2300138: Tongue
+    2300140: yogurt005
+    2300142: yogurt04
+    3300000: 37 Cookin0
+    3300002: 37 Cookin1
+    3300004: 37 Cooking
+    3300006: bottle_1_h
+    3300008: ChamferCy0
+    3300010: ChamferCyl
+    3300012: Circle05
+    3300014: Circle050
+    3300016: Circle06
+    3300018: Circle060
+    3300020: Circle30
+    3300022: Circle54
+    3300024: Cone01
+    3300026: Cone02
+    3300028: Cylinder
+    3300030: Cylinder01
+    3300032: Cylinder04
+    3300034: Cylinder_001
+    3300036: Ellipse03
+    3300038: F04 Green apple 1
+    3300040: F04 Green apple 2
+    3300042: F04 Green apple 3
+    3300044: F04 Green apple 4
+    3300046: F04 Green apple 6
+    3300048: Label
+    3300050: Line07
+    3300052: Line09
+    3300054: Loft01
+    3300056: Loft02
+    3300058: Metal box
+    3300060: Object
+    3300062: Object006
+    3300064: Object01
+    3300066: Object02
+    3300068: Object04
+    3300070: Object05
+    3300072: Plane001
+    3300074: Rectangle0
+    3300076: Rectangle1
+    3300078: Screw
+    3300080: table_de10
+    3300082: table_de12
+    3300084: table_de13
+    3300086: table_de14
+    3300088: table_de15
+    3300090: table_de16
+    3300092: table_de17
+    3300094: table_de18
+    3300096: table_de19
+    3300098: table_de20
+    3300100: table_de21
+    3300102: table_de22
+    3300104: table_de23
+    3300106: table_de24
+    3300108: table_de25
+    3300110: table_de26
+    3300112: table_de27
+    3300114: table_de28
+    3300116: table_det0
+    3300118: table_det1
+    3300120: table_det2
+    3300122: table_det3
+    3300124: table_det4
+    3300126: table_det5
+    3300128: table_det6
+    3300130: table_det7
+    3300132: table_det8
+    3300134: table_det9
+    3300136: table_det_
+    3300138: Tongue
+    3300140: yogurt005
+    3300142: yogurt04
+    4300000: bottle_1_h
+    4300002: 37 Cookin1
+    4300004: 37 Cooking
+    4300006: 37 Cookin0
+    4300008: table_det_
+    4300010: table_det0
+    4300012: table_det1
+    4300014: table_det2
+    4300016: table_det3
+    4300018: table_det4
+    4300020: table_det5
+    4300022: table_det6
+    4300024: table_det7
+    4300026: table_det8
+    4300028: table_det9
+    4300030: table_de10
+    4300032: table_de12
+    4300034: table_de13
+    4300036: table_de14
+    4300038: table_de15
+    4300040: table_de16
+    4300042: table_de17
+    4300044: table_de18
+    4300046: table_de19
+    4300048: table_de20
+    4300050: table_de21
+    4300052: table_de22
+    4300054: table_de23
+    4300056: table_de24
+    4300058: table_de25
+    4300060: table_de26
+    4300062: table_de27
+    4300064: table_de28
+    4300066: yogurt04
+    4300068: F04 Green apple 6
+    4300070: F04 Green apple 4
+    4300072: F04 Green apple 3
+    4300074: F04 Green apple 2
+    4300076: F04 Green apple 1
+    4300078: yogurt005
+    4300080: Plane001
+    4300082: Object006
+    4300084: Cylinder04
+    4300086: Object05
+    4300088: Circle060
+    4300090: Cylinder01
+    4300092: Circle54
+    4300094: Circle30
+    4300096: Circle06
+    4300098: ChamferCy0
+    4300100: Circle050
+    4300102: Circle05
+    4300104: ChamferCyl
+    4300106: Rectangle1
+    4300108: Label
+    4300110: Metal box
+    4300112: Tongue
+    4300114: Screw
+    4300116: Cylinder
+    4300118: Cylinder_001
+    4300120: Object04
+    4300122: Object01
+    4300124: Object
+    4300126: Object02
+    4300128: Line09
+    4300130: Line07
+    4300132: Loft02
+    4300134: Rectangle0
+    4300136: Loft01
+    4300138: Ellipse03
+    4300140: Cone02
+    4300142: Cone01
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
