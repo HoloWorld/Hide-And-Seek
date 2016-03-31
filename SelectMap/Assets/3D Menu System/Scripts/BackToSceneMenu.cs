@@ -5,14 +5,14 @@ using System.Collections;
 
 public class BackToSceneMenu : MonoBehaviour {
 
-	public int SceneNum = 0;//the SceneNumber
+	public string SceneName = "";//the SceneNumber
 	public string Button; //the input button that will trigger the event
 
 	void Update () 
 	{
 		if (Input.GetButtonDown(Button)) // if Left Alt is pressed we'll load the Previous Scene
 		{
-			Application.LoadLevel (SceneNum); 
+			Application.LoadLevel (SceneName); 
 		}
 	}
 }

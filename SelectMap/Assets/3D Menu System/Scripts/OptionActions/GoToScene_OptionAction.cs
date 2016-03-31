@@ -1,22 +1,33 @@
 ﻿//allows us to go from one scene to another
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 [RequireComponent (typeof (OptionScript))]
 public class GoToScene_OptionAction : OptionAction_WithButton {
 
-	public int SceneNumber = 0; //scene we want to go to
-	
+	public string SceneName = "";
+
+	void DisableAllScripts() {
+		MonoBehaviour[] scripts = gameObject.GetComponents<MonoBehaviour>();
+		foreach(MonoBehaviour script in scripts)
+		{
+			script.enabled = false;
+		}
+	}
 
 	// Update is called once per frame
 	void Update () 
 	{
 		try
 		{
+
 			if (gameObject.GetComponent<OptionScript>().Focus  && Input.GetButtonDown(Button) )
 			{
-				Application.LoadLevel (SceneNumber); //Load SceneNumber
+				DisableAllScripts();
+
+				//SceneManager.LoadScene(SceneName);
 
 				GetComponent<AudioSource>().GetComponent<AudioSource>().PlayOneShot(ActionAudio); 
 				//this audio will only be heard if this GameObject has a Object.DontDestroyOnLoad on it.

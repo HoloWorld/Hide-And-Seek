@@ -15,7 +15,7 @@ public class Grid_OptionScript : OptionScript {
 	public bool AutoDetect = true;
 
 	private ControlCameraScript CCS; //the Script attached to the camera
-	private Light light;
+	public Light light = null;
 
 	public AudioClip ChangeAudio; //when the user changes options
 	public AudioClip ErrorAudio; //when the user fails at changing options
@@ -24,59 +24,47 @@ public class Grid_OptionScript : OptionScript {
 	void Start()
 	{
 		CCS =  GameObject.Find("Main Camera").GetComponent<ControlCameraScript>();
-		light = transform.Find("Spotlight").GetComponent<Light>();
 		AutoDetectOptions();
 	}
 	
 	void Update()
 	{
-		if (Focus) //this will only be done if the this option is in focus
-		{
-			LightEnable ();
+		if (Focus) { //this will only be done if the this option is in focus
+			if (light != null)
+				light.enabled = true;
 
-			if (Input.GetButtonDown("Vertical") && Input.GetAxis("Vertical") > 0f) //if Up is pressed
-			{
-				CCS.SetFocusOption(Up);
-				PlayAudio(Up);
+			if (Input.GetButtonDown ("Vertical") && Input.GetAxis ("Vertical") > 0f) { //if Up is pressed
+				CCS.SetFocusOption (Up);
+				PlayAudio (Up);
 
 				return;
 			}
 
-			if (Input.GetButtonDown("Vertical") && Input.GetAxis("Vertical") < 0f) //if Down is pressed
-			{
-				CCS.SetFocusOption(Down);
-				PlayAudio(Down);
+			if (Input.GetButtonDown ("Vertical") && Input.GetAxis ("Vertical") < 0f) { //if Down is pressed
+				CCS.SetFocusOption (Down);
+				PlayAudio (Down);
 				
 				return;
 			}
 
-			if (Input.GetButtonDown("Horizontal") && Input.GetAxis("Horizontal") < 0f) //if Left is pressed
-			{
-				CCS.SetFocusOption(Left);
-				PlayAudio(Left);
+			if (Input.GetButtonDown ("Horizontal") && Input.GetAxis ("Horizontal") < 0f) { //if Left is pressed
+				CCS.SetFocusOption (Left);
+				PlayAudio (Left);
 				
 				return;
 			}
 
-			if (Input.GetButtonDown("Horizontal") && Input.GetAxis("Horizontal") > 0f) //if Right is pressed
-			{
-				CCS.SetFocusOption(Right);
-				PlayAudio(Right);
+			if (Input.GetButtonDown ("Horizontal") && Input.GetAxis ("Horizontal") > 0f) { //if Right is pressed
+				CCS.SetFocusOption (Right);
+				PlayAudio (Right);
 				
 				return;
 			}
 
 		} else {
-			LightDisable ();
+			if (light != null)
+				light.enabled = false;
 		}
-	}
-
-	void LightEnable() {
-		light.enabled = true;
-	}
-
-	void LightDisable() {
-		light.enabled = false;
 	}
 
 	public void PlayAudio(GameObject ThisOption) //plays the correct audio
