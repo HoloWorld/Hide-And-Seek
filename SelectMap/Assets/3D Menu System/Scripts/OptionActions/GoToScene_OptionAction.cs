@@ -9,14 +9,6 @@ public class GoToScene_OptionAction : OptionAction_WithButton {
 
 	public string SceneName = "";
 
-	void DisableAllScripts() {
-		MonoBehaviour[] scripts = gameObject.GetComponents<MonoBehaviour>();
-		foreach(MonoBehaviour script in scripts)
-		{
-			script.enabled = false;
-		}
-	}
-
 	// Update is called once per frame
 	void Update () 
 	{
@@ -25,9 +17,7 @@ public class GoToScene_OptionAction : OptionAction_WithButton {
 
 			if (gameObject.GetComponent<OptionScript>().Focus  && Input.GetButtonDown(Button) )
 			{
-				DisableAllScripts();
-
-				//SceneManager.LoadScene(SceneName);
+				SceneManager.LoadScene(SceneName);
 
 				GetComponent<AudioSource>().GetComponent<AudioSource>().PlayOneShot(ActionAudio); 
 				//this audio will only be heard if this GameObject has a Object.DontDestroyOnLoad on it.
